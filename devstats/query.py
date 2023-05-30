@@ -6,8 +6,7 @@ from glob import glob
 
 import requests
 
-endpoint = r"https://api.github.com/graphql"
-
+import ghapi
 
 def load_query_from_file(fname, repo_owner="numpy", repo_name="numpy"):
     """
@@ -193,3 +192,27 @@ class GithubGrabber:
         with open(outfile, "w") as outf:
             print(f"Writing [{outfile}]")
             json.dump(self.raw_data, outf)
+
+
+# def get_issues(api: GhApi, owner: str, repo: str, **kwargs) -> pd.DataFrame:
+#     """Get issues for a repo since a particular date in the past"""
+#     issue_generator = paged(api.issues.list_for_repo,
+#         owner=owner,
+#         repo=repo,
+#         **kwargs
+#     )
+#     issue_df = pd.DataFrame([i for page in issue_generator for i in page])
+#     # Fix datetime representation
+#     issue_df.created_at = pd.to_datetime(issue_df.created_at)
+#     issue_df.closed_at = pd.to_datetime(issue_df.closed_at)
+
+#     # Compute lifetime of issues
+#     issue_df['open_lifetime'] = issue_df.closed_at - issue_df.created_at
+    
+#     # Print quick summary
+#     print({"total issues": issue_df.shape[0], 
+#        "closed": issue_df.state.value_counts().closed, 
+#        "open": issue_df.state.value_counts().open, 
+#        "average lifetime": issue_df.open_lifetime.mean()})
+    
+#     return issue_df

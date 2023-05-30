@@ -1,0 +1,44 @@
+{
+    "cursor": "Y3Vyc29yOnYyOpHOAAExiQ==",
+    "node": {
+        "number": 35,
+        "state": "CLOSED",
+        "title": "Added hist method and added auto_x argument to plot method.",
+        "createdAt": "2011-02-22T08:07:35Z",
+        "baseRefName": "master",
+        "mergeable": "CONFLICTING",
+        "author": null,
+        "authorAssociation": "NONE",
+        "mergedBy": null,
+        "mergedAt": null,
+        "reviews": {
+            "totalCount": 0
+        },
+        "participants": {
+            "totalCount": 1
+        }
+    }
+},
+{
+    "cursor": "Y3Vyc29yOnYyOpHOAAFScw==",
+    "node": {
+        "number": 37,
+        "state": "MERGED",
+        "title": "added describe and scoreatpercentile in frame.py",
+        "createdAt": "2011-03-06T01:35:53Z",
+        "baseRefName": "master",
+        "mergeable": "CONFLICTING",
+        "author": null,
+        "authorAssociation": "NONE",
+        "mergedBy": {
+            "login": "wesm"
+        },
+        "mergedAt": "2011-03-18T20:00:26Z",
+        "reviews": {
+            "totalCount": 0
+        },
+        "participants": {
+            "totalCount": 1
+        }
+    }
+},
